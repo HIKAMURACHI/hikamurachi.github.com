@@ -1,0 +1,28 @@
+h1{
+    text-indent: 150pt;
+    color: cornflowerblue;
+    margin: 20 20 20 50;
+}
+h2{
+    margin-top: 40%;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;    
+    font-weight: 800;
+    font-size: 25pt;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 60px;
+    background-color: crimson;
+}
+.box{
+    background: cadetblue;
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 15 15 15 15;
+    align:center;    
+}

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">	
+	    <link rel="stylesheet" href="css_edu/style5.css">    
+        <title>CSS 5</title>   
+        <script>
+            function first () {            
+                document.getElementById("top_head").innerHTML = "Главная страница!";                
+                document.getElementById("text").innerHTML = "Главная страница этого сайта. Просто главная страница. И больше ничего на ней нет. Можно продлжать смотреть но на ней ничего больше нет.";                
+            }        
+            function second () {   
+                document.getElementById("top_head").innerHTML = "Задание для группы 115";          
+                document.getElementById("text").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus massa ut ex elementum rutrum. Nulla vel venenatis sem. Ut malesuada lorem interdum, sagittis metus ut, consequat libero. In et odio et tortor facilisis finibus sed in tellus. Cras mauris risus, gravida sed nisl et, dignissim suscipit eros. Pellentesque consectetur, quam in placerat fringilla, sem mi venenatis diam, nec sollicitudin eros risus interdum elit. In tincidunt purus vel augue pellentesque consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Nunc sed tortor eros. Vestibulum convallis volutpat ex sed pulvinar. Integer ut purus sit amet felis tempus faucibus vitae ac magna. Suspendisse potenti. Nam nisi risus, tincidunt sit amet purus varius, dictum varius arcu. Nulla eleifend molestie leo, quis dapibus mauris viverra eget. Vivamus nec quam blandit, semper diam a, mattis nunc. Proin eget bibendum magna. Donec consequat felis nec lectus sodales accumsan. Donec eget tellus in nibh egestas faucibus. Nullam vulputate leo eu laoreet tempor. Proin a bibendum velit, a mattis metus. Suspendisse eu neque arcu.Vestibulum eget nisl est. Maecenas in euismod risus. Ut in suscipit ligula, ac pharetra nibh. Aenean in viverra lacus, eget vestibulum augue. In porta laoreet interdum. Phasellus consequat, quam eget rhoncus ornare, ipsum dui gravida sem, vitae malesuada tortor leo non nibh. Nulla facilisi. Curabitur a porta enim. Duis vel massa dictum, vehicula augue id, ultricies felis.Vivamus vel faucibus neque. Nam euismod metus nec fermentum iaculis. Sed dapibus dui ac malesuada congue. Nam consectetur pellentesque sagittis. Maecenas pretium finibus velit, varius lacinia odio interdum a. Nulla malesuada nec libero sed hendrerit. Ut placerat at eros nec placerat. Cras elementum erat eu semper eleifend. Etiam sit amet faucibus felis. Donec eget nisl odio. Sed porttitor metus enim, ut ultrices enim rhoncus et.Quisque sodales ac risus placerat hendrerit. Mauris eu auctor ex. Sed ut sagittis tortor. Vivamus sed nisi et est pulvinar sagittis. Vestibulum in blandit erat, ac interdum tortor. Duis semper mollis mauris eget facilisis. Sed volutpat convallis est. Proin ut lacus at neque semper volutpat non ut tortor. Pellentesque sollicitudin dolor diam, a aliquet libero elementum sit amet. Mauris erat tortor, mattis sit amet commodo vel, gravida sed magna. In lobortis massa a tristique porttitor. Fusce ac ultricies nulla.";                
+            }        
+            function third () {            
+                document.getElementById("top_head").innerHTML = "Контакты";          
+                document.getElementById("text").innerHTML = "Контактов нет и фирмы тоже";                
+            }        
+            function firth () {            
+                document.getElementById("top_head").innerHTML = "О компании";          
+                document.getElementById("text").innerHTML = "Компания отсутствует";                
+            }        
+            function fifth () {            
+                document.getElementById("top_head").innerHTML = "Как добраться";          
+                document.getElementById("text").innerHTML = "Адреса нет и фирмы и контактов";                
+            }        
+        </script>
+    </head>     
+    <body onload="first()">      
+    <div class="box">
+        <div class="nav">
+            <ul>
+                <li onclick="first()">Главная</li>
+                <li onclick="second()">Новости</li>
+                <li onclick="third()">Контакты</li>
+                <li onclick="firth()">О компании</li>
+                <li onclick="fifth()">Как добраться</li>
+           </ul>           
+        </div>  
+        <h1 id="top_head"></h1>
+        <p id="text"></p>                
+    </div>
+    </body>
+</html>

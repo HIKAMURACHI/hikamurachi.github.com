@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">		
+    <title>115 canvas</title>   
+    <style>
+        @font-face {
+          font-family: "Major Mono Display";
+          src: url(fonts/MajorMono.ttf) format("truetype");
+        }
+        html,body {
+          margin: 0;
+          padding: 0;
+          background-color: black;
+        }
+
+        .background {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;                    
+          color: #fff;
+        }
+        .box{
+          width: 350px;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+        #emblem, #logo{          
+          max-width: 100%;
+          height: auto;   
+          display: block;
+          margin: auto;
+          border: none;             
+        }
+        p {
+          color: #fff;
+        }
+        H1{
+          font-family: 'Major Mono Display', monospace;
+          font-size: 20pt;
+          color: white;          
+        }
+    </style> 
+    <script>
+        window.onload = function() {
+          Particles.init({
+            selector: '.background'
+          });
+        };
+    </script>   
+  </head>
+  <body>
+    <canvas class="background"></canvas>
+    <canvas id="emblem" width="350" height="200">
+      <p>Ваш браузер не поддерживает рисование.</p>
+    </canvas>  
+    <canvas id="logo" width="350" height="200">
+        <p>Ваш браузер не поддерживает рисование.</p>
+      </canvas>   
+    <div class="box">
+      <h1>This is just a simple logo. <br> I did it with using canvas. <br> And ur right i use custom font. <br> Yep, background not mine. <br> to be continue...</h1>
+    </div>
+    <script>
+        var drawingCanvas = document.getElementById('emblem');
+        if(drawingCanvas && drawingCanvas.getContext) {
+          var context = drawingCanvas.getContext('2d');                   
+          // pos1                   
+          context.fillStyle = "rgba(255, 255, 255, 0.15)";          
+          context.fillRect (15, 15, 96, 170);          
+          context.stroke();
+
+          context.fillStyle = "rgba(255, 255, 255,  0.5)";          
+          context.fillRect (15, 15, 66, 170);         
+
+          // pos2     
+          context.fillStyle = "rgba(255,  255, 255,  0.15)";             
+          context.fillRect (126, 15, 96, 170);
+
+          context.fillStyle = "rgba(255,  255, 255,  0.5)";             
+          context.fillRect (126, 15, 66, 170);      
+          // pos3     
+          context.fillStyle = "rgba(255, 255,  255, 0.15)";                            
+          context.fillRect (237, 15, 96, 170);      
+
+          context.fillStyle = "rgba(255, 255,  255, 0.5)";                            
+          context.fillRect (257, 35, 76, 55);                                           
+
+          context.fillStyle = "rgba(255, 255,  255, 0.5)";                            
+          context.fillRect (237, 110, 76, 55);                                   
+        }
+        var drawingCanvas = document.getElementById('logo');
+        if(drawingCanvas && drawingCanvas.getContext) {
+          var context = drawingCanvas.getContext('2d');                   
+          
+          context.fillStyle = "rgba(55, 155, 255, 0.5)";                              
+          
+          context.quadraticCurveTo(0,25,375,95);
+          context.quadraticCurveTo(15,25,250,200);   
+          context.fill();                   
+
+          context.fillStyle = "rgba(55, 155, 255, 0.5)"; 
+          context.arc(116,90,0,0,Math.PI*2,true);
+          context.arc(146,90,0,0,Math.PI*2,true);          
+          context.fill();        
+                                       
+        }
+    </script>
+    <script src="edu_js/particles.js"></script>
+  </body>
+</html>

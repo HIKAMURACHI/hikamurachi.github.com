@@ -1,0 +1,92 @@
+body{
+    background-color: #303030;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 24pt;
+}
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 24pt;
+}
+div p{
+   color: black; 
+   background-color: aquamarine;
+}
+div h2{
+    color: rgb(184, 184, 184);
+    background-color: #333520;
+}
+#test p{
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    background-color: #255020;
+}
+#test h2{
+    text-align: right;
+    color: aqua;
+    background-color: darkcyan;    
+}
+.bbb{
+    background-color:white;   
+    color: blue; 
+    width: auto;
+    height: 150px;    
+}
+#test .bbb{
+    background-color: #5a455a;
+}
+p.bbb{
+    color: wheat;        
+    width: auto;
+    background-color: salmon;    
+}
+h2.bbb{
+    color: orangered;        
+    width: auto;
+    background-color: violet;    
+}
+#test p.bbb{
+    background-color: pink;
+    color: darkred;    
+    text-decoration: none;
+}
+.xxx, .bbb{
+    border: 2px solid black;
+    width: auto;    
+    height: 150px;      
+    text-align: center;
+}
+p.bbb, h2.xxx{
+    color: springgreen;
+    background-color: #454545;
+}
+#test p.bbb, #test p.xxx{
+    color: yellowgreen;
+    background-color: black;
+}
+.fff{    
+    background-color: black;
+    width: auto;
+    height: 40px;     
+}
+.fff p{
+    font-size: 14px;
+    color: darkslateblue;
+}
+p.fff{
+    font-size: 24px;
+    color: darkslateblue;
+}
+.fff .bbb{
+    color: burlywood;
+    width: 350px;
+    height: 35px;
+    font-size: 14pt;
+}
+.fff h2.bbb{
+    color: aqua;
+}

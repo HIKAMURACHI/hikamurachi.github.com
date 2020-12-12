@@ -1,0 +1,26 @@
+h1{
+    color: red;
+}
+h5{    
+    color: cornflowerblue;
+    font-size: 24pt;
+    text-decoration: underline;
+}
+.content{
+    width: 180px;
+    float: left;
+    margin: 10 10 10 10;
+}
+.ending{
+    width: 100%;
+    float: left;
+}
+.page{
+    width: 600px;
+    height: auto;
+}
+.case{    
+    margin-left: auto;
+    margin-right: auto;    
+    width: 600px; 
+}

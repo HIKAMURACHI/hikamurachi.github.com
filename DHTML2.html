@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<TITLE>DHTML-2</TITLE>
+<style>
+	.box{position: absolute; width: 150px;height: 150px; background: blueviolet;}	
+	#div2{z-index: 1}
+	p, h1, h2, h3, li{z-index: 2;}
+  	#obj {  	    	  
+  	  background-color: #fff;
+  	  position: absolute;
+  	  top: 10px;
+  	  left: 20px;        
+  	  transition:top 1s, left 2s;  	  
+  	}
+
+</style>
+<script>
+	function per_img(){				
+		document.getElementById("div2").style.zIndex = "-1";
+	}
+	function per_img2(){			
+		document.getElementById("div2").style.zIndex = "1";	
+	}
+
+	window.addEventListener('load', function () {
+    var O = document.getElementById('obj'),
+        X = 0,
+        Y = 0,mouseX=-100,mouseY=-100; 
+    window.addEventListener('mousemove', function (ev) {
+        ev = window.event || ev; 
+        X=ev.pageX;
+        Y=ev.pageY;
+    });
+
+    function move() {
+	if(document.getElementById('HTML').checked) { 
+        var p = 'px';
+        console.log(X,Y);
+        O.style.left = (X - 150) + p;
+        O.style.top = (Y - 150) + p;
+    } 
+        setTimeout(move, 100);
+    } 	
+        move();    	
+	});
+
+	setInterval (function(){
+	if(document.getElementById('JS').checked) { 
+	  var rand1 = Math.floor(Math.random() * 1000);
+	  var rand2 = Math.floor(Math.random() * 1000);	  
+	  var dot = document.getElementById('obj');
+	  //dot.style.animation = 'flash 1s linear infinite';
+	  dot.style.left = rand1 + 'px';
+	  dot.style.top = rand2 + 'px';
+	}
+	},1000)
+
+</script>
+</HEAD>
+<BODY>
+<H2>Практикум DHTML-2. Перемещение и слои</H2>
+<P>
+<br>
+<TABLE>
+<TR>
+	<TD valign="top" align="center" width="150">
+		<A HREF="javascript:void(0)" onClick="document.getElementById('div1').style.top = parseInt(document.getElementById('div1').style.top)-30;">вверх</A><BR>&nbsp;<BR>
+		<A HREF="javascript:void(0)" onClick="document.getElementById('div1').style.left = parseInt(document.getElementById('div1').style.left)-30;">влево</A>&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF="javascript:void(0)" onClick="document.getElementById('div1').style.left = parseInt(document.getElementById('div1').style.left)+30;">вправо</A><BR>&nbsp;<BR>
+		<A HREF="javascript:void(0)" onClick="document.getElementById('div1').style.top = parseInt(document.getElementById('div1').style.top)+30;">вниз</A>
+	</TD>
+	<TD width="300"></TD>
+	<TD width="300" valign="top" style="background:silver;">
+		Компьютерный стих <A HREF="#">им. А.С.Пушкина</A>
+		<P>		***
+		<P>
+		И по хребтам твоим направить<BR>
+		Как, сердца исповедь любя<BR>
+		Не удалось навек оставить
+		<P>
+		Послушай, гетман: для тебя<BR>
+		В забвенье сердца улетает<BR>
+		Вниманье дружбы возлюбя
+		<P>
+		Увы, Татьяна увядает<BR>
+		Самовластительный Злодей<BR>
+		Пустынный воздух рассекает
+		<P>
+		Мученье модных рифмачей<BR>
+		Из мира вытеснят и нас<BR>
+		Подругой ветреной моей. 
+	</TD>
+</TR>
+<td>
+	<br><br>
+	<input type="radio" name="GFG" id="GFG" value="GeeksforGeeks">Стоп<br>           
+    <input type="radio" name="GFG" id="HTML"value="HTML">Следовать за курсором<br>           
+    <input type="radio" name="GFG" id="JS" value="JavaScript">Свободное движение<br><br> 
+</td>
+</TABLE>
+<DIV style="position: absolute; top: 190; left: 70;" id="div1">
+<CENTER><IMG id="obj" SRC="img_edu/aero.gif" WIDTH="191" HEIGHT="253" BORDER="0" ALT=""  style="position : relative;"><BR>
+</DIV>
+<br><p>Воздушные шарики управляются кликом мышки</CENTER>
+<p><br><br>
+<!---NEW PART OF THIS SITE --------------------------------------------------------------------------------------------------------------------------------------->	
+	<TABLE >
+		<TR>
+			<TD valign="top" align="center" width="150">
+				<A HREF="javascript:void(0)" onClick="document.getElementById('div2').style.top = parseInt(document.getElementById('div2').style.top)-30;">вверх</A><BR>&nbsp;<BR>
+				<A HREF="javascript:void(0)" onClick="document.getElementById('div2').style.left = parseInt(document.getElementById('div2').style.left)-30;">влево</A>&nbsp;&nbsp;&nbsp;&nbsp;
+				<A HREF="javascript:void(0)" onClick="document.getElementById('div2').style.left = parseInt(document.getElementById('div2').style.left)+30;">вправо</A><BR>&nbsp;<BR>
+				<A HREF="javascript:void(0)" onClick="document.getElementById('div2').style.top = parseInt(document.getElementById('div2').style.top)+30;">вниз</A>
+			</TD>
+			<TD width="300"></TD>	
+			<DIV style="position: absolute; top: 800; left: 30; width: 150px; height: 150px;" id="div2">
+					<div class="box"></div>	
+			</DIV>		
+			<TD width="300" valign="top" style="background:silver;"  id="text">
+				Компьютерный стих <A HREF="#">им. А.С.Пушкина</A>
+				<P>		***
+				<P>
+				И по хребтам твоим направить<BR>
+				Как, сердца исповедь любя<BR>
+				Не удалось навек оставить
+				<P>
+				Послушай, гетман: для тебя<BR>
+				В забвенье сердца улетает<BR>
+				Вниманье дружбы возлюбя
+				<P>
+				Увы, Татьяна увядает<BR>
+				Самовластительный Злодей<BR>
+				Пустынный воздух рассекает
+				<P>
+				Мученье модных рифмачей<BR>
+				Из мира вытеснят и нас<BR>
+				Подругой ветреной моей. 
+			</TD>			
+		</TR>
+		<td>
+			<A HREF="javascript:void(0)" onClick="per_img()">За текстом</A>
+			<A HREF="javascript:void(0)" onClick="per_img2()">Перед текстом</A>
+		</td>
+	</TABLE>		
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<br><br>
+<div style="position: absolute; margin-top: 15px;">
+<H3>Задание</H3>
+<UL>
+	<LI>Добавьте еще один перемещаемый слой с объектом и со своей панелью управления
+	<LI>Добавьте кнопки "Поместить объект за текст", "Поместить объект перед текстом"
+	<LI>Сделайте кнопку для автоматического перемещения шариков (свободный полет шариков) 
+	<LI>Сделайте так, чтобы шарики перемещались за курсором мыши
+</UL>
+</div>
+</BODY>
+</HTML>

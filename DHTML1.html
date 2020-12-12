@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>DHTML-1</TITLE>
+<style>
+    body{background: #edeef0;}
+    li, h3, h2{font-family: 'Arial Narrow', Arial, sans-serif;}
+    img.pics{transition: all 0.2s ease-out;}
+	img.pics:hover{width: 250px; height: 250px; margin: auto; transform: scale(1.2);}
+</style>
+<script>
+var images = new Array();
+    var i = 0;
+     
+    images[0] = 'img_edu/sun.gif';
+    images[1] = 'img_edu/rain.gif';
+    images[2] = 'img_edu/arc.gif';
+     
+    function viewImages() {
+        document.getElementById("img_main").src = images[i]; 
+        i++;
+        if (i == images.length) {
+            i = 0;
+        }
+        setTimeout("viewImages()",1000);
+    }   
+</script>
+</HEAD>
+
+<BODY>
+<H2>Практикум DHTML-1. Изменение свойств графического изображения</H2>
+<P>
+<TABLE width="100%">
+<TR>
+	<TD valign="top" width="30%">	
+	<UL>
+		<LI><A HREF="javascript:void(0)" onClick="document.pic.src='img_edu/sun.gif';">Солнышко</A>
+		<LI><A HREF="javascript:void(0)" onClick="document.pic.src='img_edu/rain.gif'">Дождик</A>
+		<LI><A HREF="javascript:void(0)" onClick="document.pic.src='img_edu/arc.gif'">Радуга</A><BR>&nbsp;
+		<LI><A HREF="javascript:void(0)" onClick="document.pic.width='300'; document.pic.height='300'">Увеличить</A>			
+		<LI><A HREF="javascript:void(0)" onClick="document.pic.width='100'; document.pic.height='100'">Уменьшить</A>
+		<LI><A HREF="javascript:void(0)" onClick="document.pic.width='200'; document.pic.height='200'">Нормальный размер</A>
+	</UL>
+	
+	</TD>
+	<TD valign="top" align="center" width="70%" height="350px">
+	
+	<IMG SRC="img_edu/sun.gif" WIDTH="200" HEIGHT="200" BORDER="0" NAME="pic">
+	
+	<img src="" id="img_main">
+	
+	<table cellpading = 15>
+		<tr>
+			<td><img SRC="img_edu/sun.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+			<td><IMG SRC="img_edu/rain.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+			<td><IMG SRC="img_edu/arc.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+		</tr>
+		<tr>
+			<td><IMG SRC="img_edu/rain.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+			<td><IMG SRC="img_edu/arc.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+			<td><IMG SRC="img_edu/sun.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+		</tr>
+		<tr>
+			<td><IMG SRC="img_edu/arc.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+			<td><IMG SRC="img_edu/sun.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+			<td><IMG SRC="img_edu/rain.gif" WIDTH="100" HEIGHT="100" BORDER="0" class="pics"></td>
+		</tr>
+	</table>
+
+	</TD>
+</TR>
+</TABLE>
+<H3>Задание</H3>
+<UL>			
+	<LI>Добавьте в список изображений позицию "Радуга" arc.gif
+	<LI>Добавьте в список команд позицию "Нормальный размер" (200х200)
+    <LI>На основе механизма смены картинок сделайте фотошоу (на месте вывода картинок и из их числа)		
+    <LI>На странице разместите таблицу, в ячейках таблицы (2-3 строки и 3-4 стодбца) картинки малого размера, при наведении мышки картинки (не ячейки!!!) увеличиваются, убираем мышку - уменьшаются.
+</UL>
+<script> viewImages(); </script>
+</BODY>
+</HTML>

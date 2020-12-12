@@ -1,0 +1,39 @@
+<html>
+    <head>        
+        <link rel="stylesheet" href="css/404.css">
+        <title>404</title>                       
+    </head>
+    <body>     
+        <div class="box">
+            <div class="txt">
+                <p>404</p>
+            </div>
+        </div>
+        <img src="img/kot_udod.gif"></img>
+        <div class="sound" style="position: absolute; bottom: 95%;">
+          <button onclick="enableMute()" type="button">Nope</button>
+          <button onclick="disableMute()" type="button">Sound</button>        
+        </div>
+        <video id="myVideo" autoplay muted loop style="width: 0px; height: 0px;">
+            <source src="sound/kit.mp3" type="video/mp4">                        
+          </video>
+
+
+
+
+
+
+
+    <script>
+      var vid = document.getElementById("myVideo");
+      
+      function enableMute() { 
+        vid.muted = true;
+      } 
+
+      function disableMute() { 
+        vid.muted = false;
+      }   
+    </script>     
+    </body>
+</html>
