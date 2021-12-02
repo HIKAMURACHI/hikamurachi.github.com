@@ -30,7 +30,13 @@ function displayCanvas(){
     var canvasHTML = document.getElementById('myCanvas');
     var contextHTML = canvasHTML.getContext('2d');
     contextHTML.strokeRect(0,0,canvasHTML.width, canvasHTML.height);
-	
+    
+    if(current_seconds == seconds.value)  {current_minutes = current_minutes + 1; current_seconds = 1;} else {current_seconds = current_seconds + 1;}    
+    if(current_minutes == minutes.value)  {current_hours = current_hours + 1; current_minutes = 0;}
+    if(current_hours == hours.value)      {current_days = current_days + 1; current_hours = 0;}    
+    if(current_days == days.value)        {current_months = current_months + 1; current_days = 0;}
+    if(current_months == months.value)    {current_years = current_years + 1; current_months = 1;}  
+
     //Расчет координат центра и радиуса часов
     var radiusClock = canvasHTML.width/2 - 10;
     var xCenterClock = canvasHTML.width/2;
@@ -83,8 +89,8 @@ function displayCanvas(){
 
 	
     //Рисуем стрелки
-    var lengthSeconds = radiusNum - 10;
-    var lengthMinutes = radiusNum - 15;
+    var lengthSeconds = radiusNum * 0.85;
+    var lengthMinutes = radiusNum * 0.7;
     var lengthHour = lengthMinutes / 1.5;
     var d = new Date();                //Получаем экземпляр даты
     //var t_sec = 6*d.getSeconds();                           //Определяем угол для секунд
@@ -142,13 +148,7 @@ function displayCanvas(){
     last_days = days.value;
     last_hours = hours.value;
     last_minutes = minutes.value;
-    last_seconds = seconds.value;
-
-    if(current_seconds >= (seconds.value - 1))  {current_minutes = current_minutes + 1; current_seconds = 0;} else {current_seconds = current_seconds + 1;}    
-    if(current_minutes >= (minutes.value - 1))  {current_hours = current_hours + 1; current_minutes = 0;}
-    if(current_hours >= (hours.value - 1))      {current_days = current_days + 1; current_hours = 0;}    
-    if(current_days >= (days.value - 1))        {current_months = current_months + 1; current_days = 0;}
-    if(current_months >= (months.value - 1))    {current_years = current_years + 1; current_months = 1;}  
+    last_seconds = seconds.value;    
 
     console.log(current_seconds, current_minutes, current_hours, current_days, current_months, current_years);
 
